@@ -3,8 +3,7 @@ import {Characters} from "./components/Characters/Characters.js";
 const App = () => {
     return (
         <div>
-
-           <Characters/>
+aaa
         </div>
     );
 };
