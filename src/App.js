@@ -3,6 +3,7 @@ import {CarForm, Cars} from "./components";
 import {carService} from "./services";
 
 const App = () => {
+    const [updateCar, setUpdateCar]= useState(null)
     const[cars, setCars]=useState([]);
 
     useEffect(()=>{
@@ -11,9 +12,9 @@ const App = () => {
 
     return (
         <div>
-          <CarForm setCats={setCars}/>
+          <CarForm setCars={setCars} updateCar={updateCar}/>
             <hr/>
-            <Cars cars={cars}/>
+            <Cars cars={cars} setUpdateCar={setUpdateCar} setCars={setCars} />
         </div>
     );
 };

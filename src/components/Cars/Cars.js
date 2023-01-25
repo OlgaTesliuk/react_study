@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import {carService} from "../../services";
 import {Car} from "../Car/Car";
 
-const Cars = ({cars}) => {
+const Cars = ({cars, setUpdateCar, setCars}) => {
 
 
     return (
         <div>
-            {cars.map(car=> <Car key={car.id} car={car}/>)}
+            {cars.map(car=> <Car key={car.id} car={car} setUpdateCar={setUpdateCar} setCars={setCars}/>)}
         </div>
     );
 };
